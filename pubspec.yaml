@@ -9,6 +9,8 @@ environment:
 dependencies:
   flutter:
     sdk: flutter
+  flutter_svg: ^2.0.5
+  google_fonts: ^4.0.4
 
 dev_dependencies:
   flutter_test:
@@ -17,3 +19,9 @@ dev_dependencies:
 
 flutter:
   uses-material-design: true
+  assets:
+    - assets/icons/home.svg
+    - assets/icons/notifications.svg
+    - assets/icons/search.svg
+    - assets/icons/menu.svg
+    - assets/icons/user.svg
