@@ -4,6 +4,8 @@ import 'package:the_cholera_files/pages/tabs/home.dart';
 import 'package:the_cholera_files/pages/tabs/notifications.dart';
 import 'package:the_cholera_files/pages/tabs/profile.dart';
 
+import 'tabs/statistics.dart';
+
 class MainPage extends StatefulWidget {
   const MainPage({super.key});
 
@@ -14,7 +16,7 @@ class MainPage extends StatefulWidget {
 class _MainPageState extends State<MainPage> {
   int currentIndex = 0;
 
-  void onTap(int index){
+  void onTap(int index) {
     setState(() {
       currentIndex = index;
     });
@@ -23,6 +25,7 @@ class _MainPageState extends State<MainPage> {
   final List _screens = [
     const Home(),
     const Notifications(),
+    const Statistics(),
     const Profile()
   ];
 
@@ -30,15 +33,33 @@ class _MainPageState extends State<MainPage> {
   Widget build(BuildContext context) {
     return Scaffold(
       bottomNavigationBar: BottomNavigationBar(
-        showSelectedLabels: false,
-        showUnselectedLabels: false,
-        type: BottomNavigationBarType.fixed,
-        elevation: 0,
-        items: [
-        BottomNavigationBarItem(icon: SvgPicture.asset('assets/icons/home.svg'), label: 'Home'),
-        BottomNavigationBarItem(icon: SvgPicture.asset('assets/icons/notifications.svg'), label: 'Notifications'),
-        BottomNavigationBarItem(icon: SvgPicture.asset('assets/icons/user.svg'), label: 'Profile')
-      ]),
+          onTap: onTap,
+          showSelectedLabels: false,
+          showUnselectedLabels: false,
+          type: BottomNavigationBarType.fixed,
+          elevation: 0,
+          items: [
+            BottomNavigationBarItem(
+                icon: SvgPicture.asset(
+                  'assets/icons/home.svg',
+                  color: Colors.grey,
+                ),
+                label: 'Home'),
+            BottomNavigationBarItem(
+                icon: SvgPicture.asset('assets/icons/notifications.svg',
+                    color: Colors.grey),
+                label: 'Notifications'),
+            BottomNavigationBarItem(
+                icon: SvgPicture.asset('assets/icons/calendar.svg',
+                    color: Colors.grey),
+                label: 'Notifications'),
+            BottomNavigationBarItem(
+                icon: SvgPicture.asset(
+                  'assets/icons/user.svg',
+                  color: Colors.grey,
+                ),
+                label: 'Profile')
+          ]),
       body: _screens[currentIndex],
     );
   }

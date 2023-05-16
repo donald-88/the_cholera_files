@@ -12,12 +12,10 @@ class MainApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      theme: ThemeData(
-        useMaterial3: true,
-        textTheme: GoogleFonts.poppinsTextTheme(),
-        colorSchemeSeed: Colors.blue
-      ),
-      home: const MainPage()
-    );
+        theme: ThemeData(
+            useMaterial3: true,
+            textTheme: GoogleFonts.poppinsTextTheme(),
+            colorSchemeSeed: Colors.green),
+        home: const MainPage());
   }
 }

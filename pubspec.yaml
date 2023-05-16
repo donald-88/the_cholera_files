@@ -26,6 +26,12 @@ flutter:
     - assets/icons/search.svg
     - assets/icons/menu.svg
     - assets/icons/user.svg
+    - assets/icons/signs_symptoms.svg
+    - assets/icons/prevention.svg
+    - assets/icons/call.svg
+    - assets/icons/reports.svg
+    - assets/icons/risk_zones.svg
+    - assets/icons/calendar.svg
 
     #map data
     - assets/maps/malawi.json
