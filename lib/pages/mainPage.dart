@@ -25,13 +25,28 @@ class _MainPageState extends State<MainPage> {
   final List _screens = [
     const Home(),
     const Notifications(),
-    const Statistics(),
+    Statistics(),
     const Profile()
   ];
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      appBar: AppBar(
+        title: _screens[currentIndex] is Home
+            ? const Text('')
+            : _screens[currentIndex] is Notifications
+                ? const Text('Notifications')
+                : _screens[currentIndex] is Statistics
+                    ? const Text('Statistics')
+                    : const Text('Profile'),
+        leading: IconButton(
+          icon: CircleAvatar(
+              child: SvgPicture.asset('assets/icons/user.svg',
+                  color: Colors.black)),
+          onPressed: () {},
+        ),
+      ),
       bottomNavigationBar: BottomNavigationBar(
           onTap: onTap,
           showSelectedLabels: false,
