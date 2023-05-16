@@ -22,26 +22,35 @@ class SignUp extends StatelessWidget {
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
                     SizedBox(
-                        height: 200,
+                        height: 180,
                         child: Center(
                             child: SvgPicture.asset(
                           'assets/icons/logo.svg',
                           color: Colors.grey,
                         ))),
-                    const SizedBox(height: 30),
+                    const SizedBox(height: 10),
+                    Text(
+                      "CholeraWatch",
+                      style: Theme.of(context)
+                          .textTheme
+                          .titleLarge!
+                          .copyWith(fontWeight: FontWeight.w900, fontSize: 24),
+                    ),
+                    const SizedBox(height: 20),
                     Text(
                       "Create an account",
                       style: Theme.of(context)
                           .textTheme
-                          .titleMedium!
-                          .copyWith(fontWeight: FontWeight.bold),
+                          .titleSmall!
+                          .copyWith(fontWeight: FontWeight.w500),
                     ),
+                    const SizedBox(height: 5),
                     Text(
                       "Create your account, it takes less than a minute.",
                       style: Theme.of(context).textTheme.bodySmall,
                       textAlign: TextAlign.center,
                     ),
-                    const SizedBox(height: 20),
+                    const SizedBox(height: 10),
                     CustomTextInput(
                       onChange: (val) {},
                       hintText: "Email",
@@ -56,7 +65,7 @@ class SignUp extends StatelessWidget {
                     SizedBox(
                         height: 50,
                         child: ElevatedButton(
-                            style: const ButtonStyle(),
+                            style: ElevatedButton.styleFrom(),
                             onPressed: () async {},
                             child: const Text('Sign Up'))),
                     Row(

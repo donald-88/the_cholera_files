@@ -14,7 +14,6 @@ class _HomeState extends State<Home> {
   @override
   Widget build(BuildContext context) {
     final double width = MediaQuery.of(context).size.width;
-    final double height = MediaQuery.of(context).size.height;
     return Scaffold(
         body: SingleChildScrollView(
       child: Padding(
@@ -29,9 +28,7 @@ class _HomeState extends State<Home> {
             const SizedBox(height: 32),
             Center(
               child: GestureDetector(
-                onTap: () {
-                  Navigator.pushNamed(context, 'notification');
-                },
+                onTap: () {},
                 child: Container(
                   height: width - 80,
                   width: width - 80,

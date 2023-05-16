@@ -42,8 +42,11 @@ class _MainPageState extends State<MainPage> {
                     : const Text('Profile'),
         leading: IconButton(
           icon: CircleAvatar(
-              child: SvgPicture.asset('assets/icons/user.svg',
-                  color: Colors.black)),
+              child: Padding(
+            padding: const EdgeInsets.all(8.0),
+            child:
+                SvgPicture.asset('assets/icons/logo.svg', color: Colors.black),
+          )),
           onPressed: () {},
         ),
       ),
